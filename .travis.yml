@@ -1,5 +1,5 @@
 language: groovy
-install: ant jar
+install: ant test
 jdk:
   - oraclejdk7
   - openjdk7
