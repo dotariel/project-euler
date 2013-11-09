@@ -1,6 +1,6 @@
 Description
 ============================
-This is an exercise in applying TDD techniques to solve the problems presented by http://projecteuler.net/
+Project Euler (http://projecteuler.net) problems solved in Groovy
 
 
 Unit Tests
