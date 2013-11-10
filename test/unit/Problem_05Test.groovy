@@ -11,4 +11,10 @@ class Problem_05Test {
   divisible by all of the numbers from 1 to 20?
   */
 
+  @Ignore
+  @Test
+  void should_determine_smallest_number_evenly_divisible_by_all() {
+
+  }
+
 }
