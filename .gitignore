@@ -5,5 +5,5 @@
 *.war
 *.ear
 
-# Output
+# Output #
 gen/

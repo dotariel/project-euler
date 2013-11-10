@@ -17,5 +17,4 @@ class Problem_04Test {
     assert new Problem_04().getPalindromes(1).max() == 9
     assert new Problem_04().getPalindromes(2).max() == 9009
   }
-
 }
