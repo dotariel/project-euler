@@ -11,8 +11,4 @@ class Problem_05Test {
   divisible by all of the numbers from 1 to 20?
   */
 
-  @Test
-  void should_get_smallest_evenly_divisible_number() {
-    assert 2520 == new Problem_05().getSmallestEvenlyDivisble(10)
-  }
 }
