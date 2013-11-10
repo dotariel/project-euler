@@ -3,7 +3,7 @@ package project.euler
 class Problem_02 {
 
   public static void main(String[] args) {
-    println new Problem_02().run(4000000)
+    println new Problem_02().run(3999999)
   }
 
   public int run(int max) {
