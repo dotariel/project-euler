@@ -1,4 +1,4 @@
 language: groovy
-install: ant test
+install: ant clean test
 jdk:
   - oraclejdk7
