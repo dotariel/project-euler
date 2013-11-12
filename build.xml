@@ -182,5 +182,7 @@
     <jar jarfile="${gen}/lib/${ant.project.name}-${version}.jar" basedir="${gen}/classes" />
   </target>
 
-
+  <target name="run" depends="compile" description="Run a single problem">
+    <java classname="project.euler.problems.Problem_${problem.number}" classpathref="cp" />
+  </target>
 </project>
