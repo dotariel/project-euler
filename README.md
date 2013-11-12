@@ -4,8 +4,9 @@ Project Euler (http://projecteuler.net) problems solved in Groovy with a
 test-driven approach.
 
 
-How to produce the result of a single problem
+Run Single Problem
 ======================
+To execute the result for a single problem,
 
 `ant run -Dproblem.number=01`
 
