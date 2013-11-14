@@ -1,6 +1,6 @@
 <project name="project_euler" default="help" basedir=".">
   <description>
-        Value Pay Services, LLC. (c) Lamp build script
+    Project Euler (http://projecteuler.net) problems solved in Groovy with a test-driven approach.
   </description>
 
   <property environment="env" />
@@ -31,7 +31,7 @@
     <property name="spec.pattern" value="**/*Spec.class" />
   </target>
 
-  <target name="init" depends="hgversion, initTests">
+  <target name="init" depends="git-version, initTests">
     <mkdir dir="${gen}" />
     <mkdir dir="${gen}/classes" />
     <mkdir dir="${gen}/unit" />
@@ -39,7 +39,7 @@
     <mkdir dir="${gen}/build" />
   </target>
 
-  <target name="hgversion" description="Get the current version from Mercurial">
+  <target name="git-version">
     <touch file="${version.gen.file}" mkdirs="true" />
 
     <loadfile property="version.project.tmp" srcFile="${version.file}" />
@@ -47,30 +47,21 @@
     <replaceregexp file="${version.gen.file}" match="\n" replace="" />
     <loadfile property="version.project" srcFile="${version.gen.file}" />
 
-    <exec executable="hg" outputproperty="revision.local.tmp">
-      <arg value="id" />
-      <arg value="-n" />
-    </exec>
-    <echo file="${version.gen.file}">${revision.local.tmp}</echo>
-    <replaceregexp file="${version.gen.file}" match="\+" replace="" />
+    <!-- Version is in property {version.project} -->
+    
+    <loadfile property="revision.local" srcFile=".git/refs/heads/master" />
+    <echo file="${version.gen.file}">${revision.global.tmp}</echo>
+    <replaceregexp file="${version.gen.file}" match="\n" replace="" />
     <loadfile property="revision.local" srcFile="${version.gen.file}" />
 
-    <exec executable="hg" outputproperty="revision.global.tmp">
-      <arg value="id" />
-      <arg value="-i" />
-    </exec>
-    <echo file="${version.gen.file}">${revision.global.tmp}</echo>
-    <replaceregexp file="${version.gen.file}" match="\+" replace="" />
-    <loadfile property="revision.global" srcFile="${version.gen.file}" />
-
-    <property name="version" value="${version.project}.${revision.local}.${revision.global}" />
+    <property name="version" value="${version.project}.${revision.local}" />
     <echo file="${version.gen.file}">${version}</echo>
     <copy file="${version.gen.file}" toDir="${gen}/build" />
 
     <property name="package.version" value="${version.project}.${revision.local}" />
     <echo message="Package version: ${package.version}" />
 
-    <echo message="Build version: ${version} (global revision ${revision.global})" />
+    <echo message="Build version: ${version}" />
   </target>
 
   <target name="clean" description="Clean up">
@@ -157,7 +148,7 @@
 
   </target>
 
-  <target name="doc" depends="test, hgversion">
+  <target name="doc" depends="test, git-version">
     <delete dir="${gen}/doc" />
     <mkdir dir="${gen}/doc" />
 
