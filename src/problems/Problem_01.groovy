@@ -7,10 +7,10 @@ class Problem_01 {
   }
 
   int run(int boundary) {
-    (1..boundary-1).findAll { should_add(it) }.sum()
+    (1..boundary-1).findAll { shouldAdd(it) }.sum()
   }
 
-  boolean should_add(int number) {
+  boolean shouldAdd(int number) {
     number % 3 == 0 || number % 5 == 0
   }
 }

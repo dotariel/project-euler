@@ -14,14 +14,14 @@ class Problem_01Test {
 
   @Test
   void should_include_number_in_summation() {
-    assert !new Problem_01().should_add(1)
-    assert !new Problem_01().should_add(2)
-    assert !new Problem_01().should_add(4)
-    assert !new Problem_01().should_add(7)
+    assert !new Problem_01().shouldAdd(1)
+    assert !new Problem_01().shouldAdd(2)
+    assert !new Problem_01().shouldAdd(4)
+    assert !new Problem_01().shouldAdd(7)
 
-    assert new Problem_01().should_add(3)
-    assert new Problem_01().should_add(5)
-    assert new Problem_01().should_add(6)
+    assert new Problem_01().shouldAdd(3)
+    assert new Problem_01().shouldAdd(5)
+    assert new Problem_01().shouldAdd(6)
   }
 
   @Test
