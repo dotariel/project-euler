@@ -1,6 +1,7 @@
 package project.euler.problems
 
-class Problem_06 {
+class Problem_06 extends Problem {
+  
   public static void main(String[] args) {
     int a = new Problem_06().getSquareOfSums(100)
     int b = new Problem_06().getSumOfSquares(100)

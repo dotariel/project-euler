@@ -1,6 +1,6 @@
 package project.euler.problems
 
-class Problem_01 {
+class Problem_01 extends Problem {
 
   public static void main(String[] args) {
     println new Problem_01().run(1000)

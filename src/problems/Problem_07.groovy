@@ -1,13 +1,12 @@
 package project.euler.problems
 
-import project.euler.util.Util
+class Problem_07 extends Problem {
 
-class Problem_07 {
   public static void main(String[] args) {
     println new Problem_07().getLastPrime(10001).last()
   }
 
   public int getLastPrime(int limit) {
-    Util.getPrimesTo(limit).last()
+    getPrimesTo(limit).last()
   }
 }

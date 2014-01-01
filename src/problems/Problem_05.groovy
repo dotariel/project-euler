@@ -1,6 +1,7 @@
 package project.euler.problems
 
-class Problem_05 {
+class Problem_05 extends Problem {
+  
   public static void main(String[] args) {
     println new Problem_05().getSmallestDivisible(1, 20)
   }

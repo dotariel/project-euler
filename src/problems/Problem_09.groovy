@@ -1,6 +1,7 @@
 package project.euler.problems
 
-class Problem_09 {
+class Problem_09 extends Problem {
+  
   public static void main(String[] args) {
     int product = 1
     new Problem_09().getTriplets(1000).each { product *= it }

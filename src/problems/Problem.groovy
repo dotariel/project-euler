@@ -1,12 +1,12 @@
-package project.euler.util
+package project.euler.problems
 
-class Util {
+public abstract class Problem {
 
-  public static List<Long> getPrimeFactors(Long number) {
+  protected List<Long> getPrimeFactors(Long number) {
     getFactors(number).findAll { isPrime(it) }
   }
 
-  public static List<Long> getFactors(Long number) {
+  protected List<Long> getFactors(Long number) {
     List<Long> factors = []
 
     for (Long i=1; i<=Math.sqrt(number); i++) {
@@ -20,7 +20,7 @@ class Util {
    factors.sort()
   }
 
-  public static List<Long> getPrimesBelow(Long limit) {
+  protected List<Long> getPrimesBelow(Long limit) {
     def list = []
     int i = 2
 
@@ -32,7 +32,7 @@ class Util {
     list
   }
 
-  public static List<Long> getPrimesTo(int count) {
+  protected List<Long> getPrimesTo(int count) {
     def list = []
     int i = 2
 
@@ -44,12 +44,12 @@ class Util {
     list
   }
 
-  public static boolean isPrime(Long number) {
+  protected boolean isPrime(Long number) {
     def factors = getFactors(number)
     factors == [1,number] || factors == [number]
   }
 
-  private static boolean isFactor(Long number, Long factor) {
+  protected boolean isFactor(Long number, Long factor) {
     (number % factor == 0)
   }
 }

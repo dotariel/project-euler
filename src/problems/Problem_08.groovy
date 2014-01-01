@@ -1,6 +1,7 @@
 package project.euler.problems
 
-class Problem_08 {
+class Problem_08 extends Problem {
+  
   public static void main(String[] args) {
 
     String input = '''
