@@ -1,6 +1,6 @@
 package project.euler.problems
 
-import project.euler.util.Core
+import project.euler.util.Util
 
 class Problem_10 {
   public static void main(String[] args) {
@@ -10,7 +10,7 @@ class Problem_10 {
   public Long getSumOfPrimesBelow(Long limit) {
     Long total = 0
     for (int i=2; i<limit; i++) {
-      if (Core.isPrime(i)) {
+      if (Util.isPrime(i)) {
         total += i  
       }
     }

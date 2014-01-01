@@ -1,6 +1,6 @@
 package project.euler.problems
 
-import project.euler.util.Core
+import project.euler.util.Util
 
 class Problem_07 {
   public static void main(String[] args) {
@@ -8,6 +8,6 @@ class Problem_07 {
   }
 
   public int getLastPrime(int limit) {
-    Core.getPrimesTo(limit).last()
+    Util.getPrimesTo(limit).last()
   }
 }

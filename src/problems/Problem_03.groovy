@@ -1,6 +1,6 @@
 package project.euler.problems
 
-import project.euler.util.Core
+import project.euler.util.Util
 
 class Problem_03 {
 
@@ -9,6 +9,6 @@ class Problem_03 {
   }
 
   public Long getMaxPrimeFactor(Long number) {
-    Core.getPrimeFactors(number).max()
+    Util.getPrimeFactors(number).max()
   }
 }
